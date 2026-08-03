@@ -1,0 +1,352 @@
+    # ======================================
+# THE HOUSE OF THE UNKNOWN
+# Chapter One - Morning on the Ranch
+# ======================================
+
+inventory = []
+money = 13.50
+
+
+def pause():
+    input("\n(Press Enter to continue)\n")
+
+
+def dresser():
+    global inventory
+
+    while True:
+
+        print("\n========== TOP DRAWER ==========\n")
+
+        print("1. Knife")
+        print("2. Locket")
+        print("3. Money Bag")
+        print("4. Lucky Coin")
+        print("5. Handkerchief")
+        print("6. Canteen")
+        print("7. Pipe & Tobacco")
+        print("8. Close Drawer")
+
+        choice = input("\nChoose: ")
+
+        if choice == "1":
+            print("\n'Had this knife since I was a boy.")
+            print("Saved me more than a few times on this ranch.'")
+
+            if "Knife" not in inventory:
+                if input("Take it? (y/n): ").lower() == "y":
+                    inventory.append("Knife")
+
+        elif choice == "2":
+            print("\n'This locket was made after Ma passed.'")
+
+            if "Locket" not in inventory:
+                if input("Take it? (y/n): ").lower() == "y":
+                    inventory.append("Locket")
+
+        elif choice == "3":
+            print(f"\nMoney Bag")
+            print(f"Contains ${money:.2f}")
+
+            if "Money Bag" not in inventory:
+                if input("Take it? (y/n): ").lower() == "y":
+                    inventory.append("Money Bag")
+
+        elif choice == "4":
+            print("\n'Got this on my first payday.")
+            print("I'll leave it here for now.'")
+
+            if "Lucky Coin" not in inventory:
+                if input("Take it? (y/n): ").lower() == "y":
+                    inventory.append("Lucky Coin")
+
+        elif choice == "5":
+            print("\n'Ma's old handkerchief.'")
+
+            if "Handkerchief" not in inventory:
+                if input("Take it? (y/n): ").lower() == "y":
+                    inventory.append("Handkerchief")
+
+        elif choice == "6":
+            print("\n'My trusty canteen.")
+            print("Had it for years.'")
+
+            if "Canteen" not in inventory:
+                if input("Take it? (y/n): ").lower() == "y":
+                    inventory.append("Canteen")
+
+        elif choice == "7":
+            print("\n'Been smoking since I was twelve...")
+            print("Don't plan on stopping now.'")
+
+            if "Pipe" not in inventory:
+                if input("Take it? (y/n): ").lower() == "y":
+                    inventory.append("Pipe")
+
+        elif choice == "8":
+            break
+
+        else:
+            print("Please choose a valid option.")
+
+    print("\nYou quietly close the drawer.")
+    pause()
+
+
+def morning():
+
+    while True:
+
+        print("=" * 40)
+        print("Morning")
+        print("=" * 40)
+
+        print("\nYou slip your belongings into your pockets and straighten your hat.")
+
+        print("\nThe smell of firewood lingers in the house.")
+
+        print("Outside, you can hear cattle beginning to stir.")
+
+        print("\nWhat would you like to do?")
+
+        print("\n1. Have a drink of water")
+        print("2. Make breakfast")
+        print("3. Head outside")
+
+        choice = input("\nChoose: ")
+
+        if choice == "1":
+
+            if "Canteen" in inventory:
+                print("\nThe water is cool and refreshing.")
+            else:
+                print("\nYou reach for your canteen...")
+
+                print("You forgot to bring it.")
+
+            pause()
+
+        elif choice == "2":
+
+            print("\nYou light the old stove.")
+
+            print("Two eggs crack into a cast iron pan.")
+
+            print("You eat quietly before washing the plate.")
+
+            pause()
+
+        elif choice == "3":
+            break
+
+        else:
+            print("Please choose a valid option.")
+
+
+def old_man():
+
+    print("\nThe morning sun warms your face as you step onto the porch.")
+
+    print("The old man sits in his chair with a whiskey bottle in hand.")
+
+    print("He doesn't look at you.")
+
+    while True:
+
+        print("\nWhat would you like to do?")
+
+        print("\n1. Greet the old man")
+        print("2. Sit beside him and smoke")
+        print("3. Tend to the animals")
+
+        choice = input("\nChoose: ")
+
+        if choice == "1":
+            print('\n"Mornin\'."')
+            print("He grunts and takes another drink.")
+            break
+
+        elif choice == "2":
+
+            if "Pipe" in inventory:
+                print("\nYou pack your pipe and take a slow puff.")
+                print("The ache in your joints begins to ease.")
+
+            print('\n"Took care of the critters already..."')
+            print('"Almost outta whiskey."')
+
+            break
+
+        elif choice == "3":
+
+            print("\nYou step off the porch.")
+
+            print('"Already took care of the critters," the old man says.')
+
+            break
+
+    pause()
+
+    print('\n"Think you can head into town for me, Smokey?"')
+
+    print("\n1. 'Yessir.'")
+    print("2. Stay silent.")
+    print("3. Refuse.")
+
+    input("\nChoose: ")
+
+    print("\nYou feel the words leave your mouth before you've truly chosen them.")
+
+    print('\n"Yessir."')
+
+    print()
+
+    print("The old man smiles.")
+
+    print('"Good boy."')
+
+    print('"Pebbles is in the barn."')
+
+    pause()
+
+
+def ranch():
+
+    while True:
+
+        print("=" * 40)
+        print("THE RANCH")
+        print("=" * 40)
+
+        print("\nThe ranch stretches out before you.")
+
+        print("\nWhere would you like to go?")
+
+        print("\n1. The Pasture")
+        print("2. The Well")
+        print("3. The Barn")
+        print("4. Leave for Town")
+
+        choice = input("\nChoose: ")
+
+        if choice == "1":
+
+            print("\nYou walk into the pasture.")
+
+            print("Beneath a lone tree rest two wooden crosses.")
+
+            print("\nAbigail")
+            print("Millie")
+
+            print("\n1. Speak to Ma")
+            print("2. Speak to Millie")
+            print("3. Return")
+
+            grave = input("\nChoose: ")
+
+            if grave == "1":
+                print("\n'Miss you, Ma... wish I'd known you.'")
+
+            elif grave == "2":
+                print("\n'Damn those snakes...'")
+
+            pause()
+
+        elif choice == "2":
+
+            print("\nYou refill your canteen at the old well.")
+
+            pause()
+
+        elif choice == "3":
+
+            print("\nPebbles lifts her head and nickers happily.")
+
+            print("Her water bucket is empty.")
+
+            print("\n1. Saddle Pebbles")
+            print("2. Refill her water bucket")
+            print("3. Return")
+
+            barn = input("\nChoose: ")
+
+            if barn == "1":
+
+                print("\nYou fasten the saddle.")
+
+                print("Pebbles happily accepts a biscuit.")
+
+            elif barn == "2":
+
+                print("\nYou lower the bucket into the well...")
+
+                print("Down...")
+                print("Down...")
+                print("Down...")
+
+                print("\nYou carry the fresh water back.")
+
+                print("Pebbles drinks happily.")
+
+            pause()
+
+        elif choice == "4":
+
+            print("\nYou tighten Pebbles' saddle one last time.")
+
+            print("The old man watches from the porch,")
+            print("whiskey bottle still in hand.")
+
+            print("\nHe doesn't wave.")
+
+            print("He never does.")
+
+            pause()
+
+            print("The ranch slowly disappears behind you.")
+
+            print("Ahead lies Ashwood.")
+
+            print("\nWhatever waits there...")
+
+            print("...your life will never be the same.")
+
+            pause()
+
+            print("=" * 40)
+            print("End of Chapter One")
+            print("=" * 40)
+
+            break
+
+        else:
+            print("Please choose a valid option.")
+
+
+# ======================
+# GAME START
+# ======================
+
+print("=" * 40)
+print("THE HOUSE OF THE UNKNOWN")
+print("Chapter One - Morning on the Ranch")
+print("=" * 40)
+
+pause()
+
+print("You wake in your bed.")
+
+pause()
+
+print("What would you like to do?\n")
+print("1. Look through your dresser")
+
+input("\nChoose: ")
+
+dresser()
+
+morning()
+
+old_man()
+
+ranch()
